@@ -1,0 +1,7 @@
+body{font-family:Segoe UI,Arial,Helvetica,sans-serif;background:#f6f8fa;margin:0;padding:20px}
+.card{max-width:480px;margin:40px auto;padding:24px;background:#fff;border-radius:8px;box-shadow:0 6px 18px rgba(15,23,42,.08)}
+h1{margin:0 0 18px;font-size:20px}
+label{display:block;margin:12px 0 6px;font-weight:600}
+input[type=text],input[type=date]{width:100%;padding:8px 10px;border:1px solid #d1d5db;border-radius:6px}
+button{margin-top:16px;padding:10px 14px;background:#0366d6;color:#fff;border:none;border-radius:6px;cursor:pointer}
+#message{margin-top:12px;color:#065f46;display:none}
