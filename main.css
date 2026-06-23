@@ -1,0 +1,81 @@
+body {
+  font-family: Segoe UI, Arial, Helvetica, sans-serif;
+  background: #f6f8fa;
+  margin: 0;
+  padding: 20px;
+}
+
+.card {
+  max-width: 580px;
+  margin: 40px auto;
+  padding: 24px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+}
+
+h1 {
+  margin: 0 0 18px;
+  font-size: 20px;
+}
+
+/* Main headings for form sections */
+label {
+  display: block;
+  margin: 16px 0 8px;
+  font-weight: 600;
+}
+
+/* Specific override for checkbox/radio choice labels */
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  display: inline-block;
+  font-weight: 400;
+  margin: 0 16px 0 4px;
+  vertical-align: middle;
+}
+
+/* Text inputs styled to fill container width safely */
+input[type="text"],
+input[type="date"],
+select {
+  width: 40%;
+  box-sizing: border-box;
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  margin-bottom: 4px;
+}
+
+/* Ensure checkbox and radio alignments sit inline */
+input[type="checkbox"],
+input[type="radio"] {
+  vertical-align: middle;
+  margin: 0;
+}
+
+input[type="tel"],
+input[type="email"] {
+  width: 40%;
+  box-sizing: border-box;
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  margin-bottom: 4px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 14px;
+  background: #0366d6;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#message {
+  margin-top: 12px;
+  color: #065f46;
+  display: none;
+}
