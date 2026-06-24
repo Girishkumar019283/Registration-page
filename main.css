@@ -1,7 +1,102 @@
-body{font-family:Segoe UI,Arial,Helvetica,sans-serif;background:#f6f8fa;margin:0;padding:20px}
-.card{max-width:480px;margin:40px auto;padding:24px;background:#fff;border-radius:8px;box-shadow:0 6px 18px rgba(15,23,42,.08)}
-h1{margin:0 0 18px;font-size:20px}
-label{display:block;margin:12px 0 6px;font-weight:600}
-input[type=text],input[type=date]{width:100%;padding:8px 10px;border:1px solid #d1d5db;border-radius:6px}
-button{margin-top:16px;padding:10px 14px;background:#0366d6;color:#fff;border:none;border-radius:6px;cursor:pointer}
-#message{margin-top:12px;color:#065f46;display:none}
+body {
+    font-family: Segoe UI, Arial, Helvetica, sans-serif;
+    background: #f6f8fa;
+    margin: 0;
+    padding: 20px;
+}
+
+.card {
+    max-width: 480px;
+    margin: 40px auto;
+    padding: 24px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(15,23,42,.08);
+}
+
+h1 {
+    margin: 0 0 18px;
+    font-size: 20px;
+}
+
+label {
+    display: block;
+    margin: 12px 0 6px;
+    font-weight: 600;
+}
+
+/* 1. Base input styles first */
+input[type=text], input[type=tel], input[type=email], input[type=date] {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    box-sizing: border-box; /* Prevents padding from breaking widths */
+}
+
+input[type=date] {
+    width: 15%;
+    padding: 8px 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+}
+
+/* 2. Specific ID overrides second so they work correctly */
+#name {
+    width: 40%;
+}
+
+#pin,#mobile,#email {
+    width: 20%;
+}
+
+#address1, #address2 {
+    width: 80%;
+}
+
+#city {
+    width: 30%;
+}
+
+/* 3. Button layout and alignment */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Uniform spacing between buttons */
+    margin-top: 16px;
+}
+
+button {
+    padding: 10px 14px;
+    background: #0366d6;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#message {
+    margin-top: 12px;
+    color: #065f46;
+    display: none;
+}
+
+/* Courses inline checkbox styles */
+.checkbox-group { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin: 6px 0 12px; }
+.checkbox-item { display: inline-flex; align-items: center; gap: 8px; padding: 8px 10px; background: #fbfdff; border: 1px solid #eef6fb; border-radius: 8px; font-weight: 500; }
+.checkbox-item input[type="checkbox"] { width: 18px; height: 18px; margin: 0; }
+
+/* Error text style */
+.error-msg {
+    color: #dc2626;
+    font-size: 13px;
+    margin-top: 4px;
+    display: block;
+    font-weight: 500;
+}
+
+/* Red border for invalid inputs */
+input.invalid, select.invalid {
+    border-color: #dc2626 !important;
+    background-color: #fef2f2;
+}

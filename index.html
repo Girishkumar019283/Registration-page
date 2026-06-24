@@ -7,18 +7,21 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <div class="card">
-        <h1>Registration</h1>
+    
+        <h1>Registration Form</h1>
         <form id="regForm" method="post">
             <label for="name">Name</label>
             <input id="name" name="name" type="text" placeholder="Full name" required>
 
             <label for="dob">Date of Birth</label>
             <input id="dob" name="dob" type="date" required>
-
-
+            <script>
+                const today = new Date().toISOString().split('T')[0];
+                document.getElementById("dob").setAttribute('max', today);
+            </script>
+                 
              <label for="country">Country</label>
-            <select name="country" placeholder="select country" required>
+            <select name="country" placeholder="select country" onchange="clearfields()" required>
                <option value="" disabled selected hidden>Select your country</option>
                
                 <option value="am">America</option>
@@ -51,26 +54,20 @@
             <input type="text" id="city" name="city" required>
 
             <label for="pin">Pin Code</label>
-            <input type="text" id="pin" name="pin" required>
+            <input type="tel" id="pin" name="pin" required>
 
             <label>Select Courses</label>
-            
-                <label for="course-web">Web Development</label>
-                <input type="checkbox" id="course-web" name="courses" value="web_dev">
-            
-                <label for="course-data">Data Science</label>
-                <input type="checkbox" id="course-data" name="courses" value="data_science">
-          
-                <label for="course-ai">AI & Machine Learning</label>
-                <input type="checkbox" id="course-ai" name="courses" value="ai_ml">
-               
-                <label for="res">Residence</label>
+            <div class="checkbox-group" aria-label="Select Courses">
+                <label class="checkbox-item"><input type="checkbox" id="course-web" name="courses" value="web_dev"><span>Web Development</span></label>
+                <label class="checkbox-item"><input type="checkbox" id="course-data" name="courses" value="data_science"><span>Data Science</span></label>
+                <label class="checkbox-item"><input type="checkbox" id="course-ai" name="courses" value="ai_ml"><span>AI & Machine Learning</span></label>
+            </div>
 
-                <input type="radio" id="status-indian" name="citizenship" value="indian" checked>
-                <label for="status-indian">Indian</label>
-
-                <input type="radio" id="status-nri" name="citizenship" value="nri">
-                <label for="status-nri">NRI</label>
+            <label>Residence</label>
+            <div class="radio-group" aria-label="Select Citizenship Status">
+                <label class="radio-item"><input type="radio" id="status-indian" name="citizenship" value="indian" required><span>Indian</span></label>
+                <label class="radio-item"><input type="radio" id="status-nri" name="citizenship" value="nri" required><span>NRI</span></label>
+            </div>
 
 
                 <label for="mobile">Mobile</label>
@@ -78,12 +75,16 @@
 
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" required>
-
-
-            <button type="submit">Submit</button>
+            <br/><br/>
+            
+            <div class="button-container">
+            <button type="submit">Submit</button>  
+            <button type="reset">Clear</button>
+            </div>
+        
         </form>
-        <div id="message" role="status" aria-live="polite"></div>
-    </div>
+        
+ 
 
     <script src="main.js" defer></script>
 </body>
